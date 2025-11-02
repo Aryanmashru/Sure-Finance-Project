@@ -22,6 +22,9 @@ def extract_hdfc_details(pdf2_text, plumber_text):
    
     #  Statement Date 
     
+   
+    #  Statement Date 
+    
     statement_patterns = [
         r"Statement\s*Date\s*[:\-]?\s*(\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4})",
         r"StatementDate\s*[:\-]?\s*(\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4})",
@@ -32,6 +35,8 @@ def extract_hdfc_details(pdf2_text, plumber_text):
         if match:
             details["statement_date"] = match.group(1)
             break
+
+    #  Card Number 
 
     #  Card Number 
 
@@ -47,6 +52,7 @@ def extract_hdfc_details(pdf2_text, plumber_text):
             break
 
       #  Payment Table
+      #  Payment Table
     table_pattern = re.search(
         r"Payment\s*Due\s*Date\s+Total\s+Dues\s+Minimum\s+Amount\s+Due\s*\n?"
         r"\s*([0-9]{2}/[0-9]{2}/[0-9]{4})\s+([\d,]+\.\d{2})\s+([\d,]+\.\d{2})",
@@ -60,6 +66,8 @@ def extract_hdfc_details(pdf2_text, plumber_text):
 
 
     #  Billing Cycle 
+
+    #  Billing Cycle 
     billing_cycle_match = re.search(
         r"Billing\s*Cycle\s*[:\-]?\s*([0-9]{2}/[0-9]{2}/[0-9]{4})\s*-\s*([0-9]{2}/[0-9]{2}/[0-9]{4})",
         plumber_text,
@@ -68,6 +76,8 @@ def extract_hdfc_details(pdf2_text, plumber_text):
     if billing_cycle_match:
         details["billing_cycle"] = f"{billing_cycle_match.group(1)} - {billing_cycle_match.group(2)}"
 
+    
+    #  Confidence Score
     
     #  Confidence Score
     filled = sum(1 for v in details.values() if v not in [None, "", 0.0])
@@ -88,6 +98,7 @@ def parse_hdfc_statement(file_path):
     data = extract_hdfc_details(pdf2_text, plumber_text)
 
     print("\n----  FINAL HDFC OUTPUT ----")
+    print("\n----  FINAL HDFC OUTPUT ----")
     print(json.dumps(data, indent=2))
     return data
 
@@ -96,5 +107,6 @@ def parse_hdfc_statement(file_path):
 # 🔹 Run directly for testing
 # -------------------------------
 if __name__ == "__main__":
+    file_path = r"examples\hdfc.pdf"  
     file_path = r"examples\hdfc.pdf"  
     parse_hdfc_statement(file_path)
