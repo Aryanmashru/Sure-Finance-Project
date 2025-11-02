@@ -16,7 +16,7 @@ def extract_idfc_details(pdf2_text, plumber_text, file_path):
         "confidence": 0.0
     }
 
-    # ✅ Extract 2x2 table data
+    #  Extract 2x2 table data
     with pdfplumber.open(file_path) as pdf:
         for page in pdf.pages:
             tables = page.extract_tables()
@@ -47,7 +47,7 @@ def extract_idfc_details(pdf2_text, plumber_text, file_path):
                         details["new_balance"] = amts[0].replace(",", "")
                         details["min_amount_due"] = amts[1].replace(",", "")
 
-    # ✅ Extract Card Number (handles * or X masking)
+    #  Extract Card Number 
     card_match = re.search(
         r"Card\s*Number\s*[:\-]?\s*(?:\d{4}[\s*Xx*]*){2,3}(\d{4})", plumber_text, re.IGNORECASE
     )
@@ -58,7 +58,7 @@ def extract_idfc_details(pdf2_text, plumber_text, file_path):
     else:
         details["card_last4"] = card_match.group(1)
 
-    # ✅ Confidence score
+    #  Confidence score
     filled = sum(1 for v in details.values() if v not in [None, ""])
     details["confidence"] = round(filled / len(details), 2)
 
