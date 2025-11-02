@@ -33,4 +33,4 @@ cd <Sure-Finance-Project>
 pip install -r requirements.txt
 
 # Run parser
-python main_parser.py #Change the file in the main_parser.py and run the file through terminal 
+python main_parser.py #Change or add the desired pdf in the main_parser.py(in the file path) and run the file through terminal 
