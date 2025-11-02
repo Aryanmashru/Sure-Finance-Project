@@ -2,11 +2,11 @@
   "bank": "HDFC",
   "card_last4": "3458",
   "statement_date": "12/03/2023",
-  "payment_due_date": null,
-  "new_balance": null,
-  "min_amount_due": null,
+  "payment_due_date": "01/04/2023",
+  "new_balance": "22935.00",
+  "min_amount_due": "22935.00",
   "billing_cycle": null,
-  "confidence": 0.38,
+  "confidence": 0.86
   "file_name": "hdfc-1.pdf",
   "parsed_at": "2025-11-02 15:03:52"
 }
