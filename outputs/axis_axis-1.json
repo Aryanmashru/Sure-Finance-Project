@@ -1,0 +1,12 @@
+{
+  "bank": "AXIS",
+  "card_last4": "7381",
+  "statement_date": "15/10/2021",
+  "payment_due_date": "04/11/2021",
+  "new_balance": "78708.38",
+  "min_amount_due": "3936.00",
+  "billing_cycle": "17/09/2021 - 15/10/2021",
+  "confidence": 1.0,
+  "file_name": "axis-1.pdf",
+  "parsed_at": "2025-11-02 15:02:47"
+}

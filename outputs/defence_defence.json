@@ -1,0 +1,12 @@
+{
+  "bank": "DEFENCE",
+  "card_last4": null,
+  "statement_date": "31",
+  "payment_due_date": "24 Nov 20",
+  "new_balance": "420.76",
+  "min_amount_due": "420.76",
+  "billing_cycle": "10ct20 - 31",
+  "confidence": 0.83,
+  "file_name": "defence.pdf",
+  "parsed_at": "2025-11-02 15:04:10"
+}

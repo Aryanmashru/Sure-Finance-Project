@@ -1,0 +1,12 @@
+{
+  "bank": "IDFC",
+  "card_last4": "9388",
+  "statement_date": "24/08/2021",
+  "payment_due_date": "11/09/2021",
+  "new_balance": "29147.25",
+  "min_amount_due": "1457.36",
+  "billing_cycle": null,
+  "confidence": 0.88,
+  "file_name": "idfc-2.pdf",
+  "parsed_at": "2025-11-02 15:04:26"
+}

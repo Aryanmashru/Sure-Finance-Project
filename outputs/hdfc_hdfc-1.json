@@ -1,0 +1,12 @@
+{
+  "bank": "HDFC",
+  "card_last4": "3458",
+  "statement_date": "12/03/2023",
+  "payment_due_date": null,
+  "new_balance": null,
+  "min_amount_due": null,
+  "billing_cycle": null,
+  "confidence": 0.38,
+  "file_name": "hdfc-1.pdf",
+  "parsed_at": "2025-11-02 15:03:52"
+}

@@ -1,0 +1,48 @@
+{
+  "HDFC": {
+    "keywords": ["HDFC Bank Credit Card"],
+    "card_last4": "X{2,}\\s*(\\d{4})",
+    "card_variant": "(Millennia|Regalia|Diners|MoneyBack|Platinum)",
+    "billing_cycle": "(?:Statement Period|Billing Cycle)\\s*:?\\s*([A-Za-z0-9 ,-/]+)",
+    "payment_due_date": "Payment Due Date\\s*:?\\s*([0-9/\\-]+)",
+    "new_balance": "(?:Total Dues|Total Amount Due)\\s*:?\\s*₹?\\s*([0-9,]+\\.\\d{2})",
+    "min_amount_due": "(?:Minimum Amount Due)\\s*:?\\s*₹?\\s*([0-9,]+\\.\\d{2})",
+    "statement_date": "Statement Date\\s*:?\\s*([0-9/\\-]+)"
+  },
+  "AXIS": {
+    "keywords": ["Axis Bank Credit Card", "Axis Bank Limited"],
+    "card_last4": "(?:\\*{2,}|X{2,})\\s*(\\d{4})",
+    "billing_cycle": "(?:Statement Period|Billing Cycle)\\s*:?\\s*([0-9/\\-]+\\s*-\\s*[0-9/\\-]+)",
+    "payment_due": "Payment Due Date \\s*:?\\s*([0-9/\\-]+)",
+    "new_balance": "(?:Total Payment Due|Total Amount Due)\\s*:?\\s*₹?\\s*([0-9,]+\\.\\d{2})",
+    "min_amount_due": "(?:Minimum Payment Due|Minimum Amount Due)\\s*:?\\s*₹?\\s*([0-9,]+\\.\\d{2})",
+    "statement_date": "(?:Statement Date)\\s*:?\\s*([0-9/\\-]+)"
+  },
+  "ICICI": {
+    "keywords": ["ICICI Bank Credit Card"],
+    "card_last4": "Card ending\\s*(\\d{4})",
+    "billing_cycle": "(?:Billing Cycle|Statement Period)\\s*:?\\s*([A-Za-z0-9 ,-/]+)",
+    "payment_due_date": "Payment Due Date\\s*:?\\s*([0-9/\\-]+)",
+    "new_balance": "(?:Total Amount Due|Total Dues)\\s*:?\\s*₹?\\s*([0-9,]+\\.\\d{2})",
+    "min_amount_due": "(?:Minimum Amount Due)\\s*:?\\s*₹?\\s*([0-9,]+\\.\\d{2})",
+    "statement_date": "(?:Statement Date)\\s*:?\\s*([0-9/\\-]+)"
+  },
+  "IDFC": {
+    "keywords": ["IDFC FIRST Bank Credit Card"],
+    "card_last4": "(?:\\*{2,}|X{2,})\\s*(\\d{4})",
+    "billing_cycle": "(?:Statement Period|Billing Cycle)\\s*:?\\s*([0-9/\\-]+\\s*-\\s*[0-9/\\-]+)",
+    "payment_due_date": "Payment Due Date\\s*:?\\s*([0-9/\\-]+)",
+    "new_balance": "(?:Total Amount Due|Total Payment Due)\\s*:?\\s*₹?\\s*([0-9,]+\\.\\d{2})",
+    "min_amount_due": "(?:Minimum Amount Due|Minimum Payment Due)\\s*:?\\s*₹?\\s*([0-9,]+\\.\\d{2})",
+    "statement_date": "Statement Date\\s*:?\\s*([0-9/\\-]+)"
+  },
+  "SBI": {
+    "keywords": ["SBI Card", "State Bank of India Credit Card"],
+    "card_last4": "(?:\\*{2,}|X{2,})\\s*(\\d{4})",
+    "billing_cycle": "(?:Statement Period|Billing Cycle)\\s*:?\\s*([0-9/\\-]+\\s*-\\s*[0-9/\\-]+)",
+    "payment_due_date": "Payment Due Date\\s*:?\\s*([0-9/\\-]+)",
+    "new_balance": "(?:Total Amount Due|Total Dues)\\s*:?\\s*₹?\\s*([0-9,]+\\.\\d{2})",
+    "min_amount_due": "(?:Minimum Amount Due)\\s*:?\\s*₹?\\s*([0-9,]+\\.\\d{2})",
+    "statement_date": "Statement Date\\s*:?\\s*([0-9/\\-]+)"
+  }
+}

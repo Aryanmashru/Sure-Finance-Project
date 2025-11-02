@@ -1,0 +1,12 @@
+{
+  "bank": "ICICI",
+  "card_last4": "0006",
+  "statement_date": "July 28, 2019",
+  "payment_due_date": "August 15, 2019",
+  "new_balance": "17848.75",
+  "min_amount_due": "900.00",
+  "billing_cycle": null,
+  "confidence": 0.83,
+  "file_name": "icici-3.pdf",
+  "parsed_at": "2025-11-02 14:44:41"
+}
