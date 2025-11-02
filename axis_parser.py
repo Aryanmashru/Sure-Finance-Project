@@ -15,14 +15,14 @@ def extract_axis_details(pdf2_text, plumber_text):
         "confidence": 0.0
     }
 
-    # ✅ Card Number (e.g., 533467******7381)
+    #  Card Number
     card_match = re.search(r"Card\s*No[: ]*\s*\d{4,6}\*+\d{4}", pdf2_text, re.IGNORECASE)
     if card_match:
         digits = re.sub(r"\D", "", card_match.group())
         details["card_last4"] = digits[-4:]
         print(f"✅ Card ending: {details['card_last4']}")
 
-    # ✅ Payment summary table
+    #  Payment summary table
     table_match = re.search(
         r"Total\s*Payment\s*Due\s+Minimum\s*Payment\s*Due\s+Statement\s*Period\s+Payment\s*Due\s*Date\s+Statement\s*Generation\s*Date\s*\n\s*([\d,]+\.\d{2})\s*Dr?\s+([\d,]+\.\d{2})\s*Dr?\s+(\d{2}\/\d{2}\/\d{4}\s*-\s*\d{2}\/\d{2}\/\d{4})\s+(\d{2}\/\d{2}\/\d{4})\s+(\d{2}\/\d{2}\/\d{4})",
         plumber_text,
@@ -37,7 +37,7 @@ def extract_axis_details(pdf2_text, plumber_text):
         details["statement_date"] = table_match.group(5)
         print("✅ Extracted Axis summary table data")
 
-    # ✅ Confidence Score
+    #  Confidence Score
     filled = sum(1 for v in details.values() if v not in [None, ""])
     details["confidence"] = round(filled / len(details), 2)
 
