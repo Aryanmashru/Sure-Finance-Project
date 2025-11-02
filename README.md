@@ -1,8 +1,8 @@
-# 🧾 Credit Card Statement Parser
+# Credit Card Statement Parser
 
 A modular Python-based system to automatically detect and extract data from credit card statements across multiple banks (HDFC, Axis, ICICI, IDFC, Defence).
 
-## 🚀 Features
+##  Features
 - Auto-detects bank type using text analysis
 - Extracts key fields like:
   - Statement Date
@@ -14,19 +14,18 @@ A modular Python-based system to automatically detect and extract data from cred
 - Confidence score based on filled fields
 - Modular architecture for easy addition of new banks
 
-## 🧩 Supported Banks
+##  Supported Banks
 ✅ HDFC  
 ✅ Axis  
 ✅ ICICI  
 ✅ IDFC  
 ✅ Defence  
 
-## 📁 Folder Structure
 
 ## 🧠 How to Run
 
 ```bash
-# Clone repo
+Clone repo
 git clone 
 cd <Sure-Finance-Project>
 
