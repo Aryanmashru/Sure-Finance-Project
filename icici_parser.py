@@ -78,7 +78,7 @@ def parse_icici(pdf_path):
     filled = sum(1 for v in fields if v)
     result["confidence"] = round(filled / len(fields), 2)
 
-    print("\nDetected: ICICI Bank Statement ✅")
+    print("\nDetected: ICICI Bank Statement ")
     print(result)
     return result
 
